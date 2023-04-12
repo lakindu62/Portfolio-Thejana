@@ -1,4 +1,4 @@
-import React, { useState ,useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import "./projects.css"
 
 
@@ -12,20 +12,19 @@ const image07 = "src/assets/ProjectsSection/card 07.jpeg"
 const image08 = "src/assets/ProjectsSection/card 08.jpeg"
 
 
-function Card({ width, height, image,id }) {
-
+//CARD COMPONENT
+function Card({ width, height, image, id }) {
     const styles = {
         width: width,
         height: height,
     }
-   
 
     return (
-    <div id={id}  style={styles} className="  duration-500 hover:scale-[105%] hover:z-10 -translate-y-4 border-solid   flex  shadow-cardShadow bg-[#35292F] border rounded-2xl border-[#752390]">
+        <div id={id} style={styles} className="  duration-500  hover:z-10 -translate-y-4 border-solid   flex  shadow-cardShadow bg-[#35292F] border rounded-2xl border-[#752390] hover:scale-[125%]">
 
-        <img className="duration-500  hover:grayscale-0 filter   border border-[#752390] rounded-2xl" src={image} />
+            <img className="duration-500  hover:grayscale-0 filter   border border-[#752390] rounded-2xl" src={image} />
 
-    </div>
+        </div>
     )
 }
 
@@ -36,75 +35,91 @@ function Card({ width, height, image,id }) {
 
 function MainProjects() {
 
-    const [inSight , setinSight] =  useState(false)
+    const cardContainerRef = useRef(null)
 
     const w = "200px"
     const h = "300px"
 
-    const cardContainerRef = useRef()
+    const [scrolldis, setScrolldis] = useState(0)
+
+
+    //TESTING INFINITE SCROLL
+    /*
+        useEffect(() => {
+            const cardEl = document.querySelector("#cardId")
+            const cardWidth = cardEl.clientWidth
+            console.log(cardWidth)
+            cardContainerRef.current.addEventListener('scroll', handleScroll)
+
+            function handleScroll() {
+                setScrolldis(cardContainerRef.current.scrollLeft)
+            }
+            scrolldis >= cardContainerRef.current.clientWidth + cardWidth ? cardContainerRef.current.scrollLeft = 0 : ''
+        }, [scrolldis])
+
+    */
+
+
+
     function scroll(scrollOffset) {
-     cardContainerRef.current.scrollLeft += scrollOffset
-        console.log (cardContainerRef.current.scrollLeft)
-        console.log (cardContainerRef.current.clientWidth)
+        cardContainerRef.current.scrollLeft += scrollOffset
+
     }
+    useEffect(() => {    //INTERSECTION OBSERVER FOR THE CARDS
 
 
 
-   
 
-    useEffect(()=>{
-        const cardEls = document.querySelectorAll("#cardId")
-        cardEls.forEach(cardEl =>{
-            observer.observe(cardEl)
-        })
-
-       
-        
-        
-    },[])
-
-    console.log(cardContainerRef.current)
-
-      const   styles = {
-            transform : "scale(1.2)",
+        const styles = {
+            transform: "scale(1.2)",
             filter: "grayscale(0)"
         }
-        
+
         const ifNotIntersectingStyles = {
-            transform : "scale(1)",
+            transform: "scale(1)",
             filter: "grayscale(100%)"
         }
 
-    const observer = new IntersectionObserver(entries =>{
-        entries.forEach(entry =>{
-            entry.isIntersecting ? Object.assign(entry.target.style, styles)
-             :Object.assign(entry.target.style, ifNotIntersectingStyles)
+        const focusStyles = {
+            transform: "scale(1.6)",
+            zIndex: "10"
 
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    Object.assign(entry.target.style, styles);
+                   
+                } else {
+                    
+                    Object.assign(entry.target.style, ifNotIntersectingStyles)
+                    
+                }
+            })
+        }, {
+            root: cardContainerRef.current,
+            rootMargin: "0% -50% 0% -50%",
+            threshold: "0"
         })
-    },{
-        root:cardContainerRef.current,
-        rootMargin: "0% -50% 0% -50%"
-        
-    })
-
-    
-    
-
-    
 
 
 
+        const cardEls = document.querySelectorAll("#cardId")
+        cardEls.forEach(cardEl => {
+            observer.observe(cardEl)
+        })
+
+
+        return () => {
+            cardEls.forEach(cardEl => {
+                observer.unobserve(cardEl)
+            })
+        }
 
 
 
-
-
-
-
-
-
-
-
+    }, [])
 
 
 
@@ -113,8 +128,8 @@ function MainProjects() {
             <h1 className="text-center text-[#EEEBD0] text-[7vh] pt-5  font-iceland">PROJECTS</h1>
             {/* gallery */}
             <div className="flex  justify-center border-solid border-white items-center">
-                <img onClick={() => scroll(-240)} className="h-10 -translate-y-10 mr-10 " src="src/assets/ProjectsSection/Vector-1.png" />
-                <div  ref= {cardContainerRef} className="scroll-smooth w-[690px] h-[500px]   overflow-x-scroll  grid grid-cols-8 items-center  gap-60  flex-none  border-solid border-white " >
+                <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-10 -translate-y-10 mr-10 " src="src/assets/ProjectsSection/Vector-1.png" />
+                <div ref={cardContainerRef} className="scroll-smooth w-[690px] h-[500px]   overflow-x-scroll  grid grid-cols-8 items-center  gap-60  flex-none  border-solid border-white " >
                     <Card id="cardId" width={w} height={h} image={image01} />
                     <Card id="cardId" width={w} height={h} image={image02} />
                     <Card id="cardId" width={w} height={h} image={image03} />
@@ -124,7 +139,7 @@ function MainProjects() {
                     <Card id="cardId" width={w} height={h} image={image07} />
                     <Card id="cardId" width={w} height={h} image={image08} />
                 </div>
-                <img onClick={() => scroll(+240)} className="h-10 -translate-y-10 ml-10" src="src/assets/ProjectsSection/Vector.png" />
+                <img onClick={() => scroll(+240)} className=" duration-300 focus:shadow-buttonFocusShadow hover:scale-[105%] h-10 -translate-y-10 ml-10" src="src/assets/ProjectsSection/Vector.png" />
 
             </div>
 

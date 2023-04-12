@@ -31,6 +31,7 @@ module.exports = {
       boxShadow:{
         "heroShadow" : '0px 3px 4px 0px rgba(0,0,0,0.25)',
         "cardShadow" : '0px 2px 15px 2px rgba(118, 36, 147, 0.75)',
+        "buttonFocusShadow" : 'inset 0px 4px 4px rgba(0, 0, 0, 0.25);'
 
       },
     },
