@@ -67,9 +67,6 @@ function MainProjects() {
     }
     useEffect(() => {    //INTERSECTION OBSERVER FOR THE CARDS
 
-
-
-
         const styles = {
             transform: "scale(1.2)",
             filter: "grayscale(0)"
@@ -124,8 +121,8 @@ function MainProjects() {
 
 
     return (
-        <div className="pt-20">
-            <h1 className="text-center text-[#EEEBD0] text-[7vh] pt-5  font-iceland">PROJECTS</h1>
+        <div className="pt-10">
+            <h1 className="text-center text-[#EEEBD0] text-[7vh] pt-4  font-iceland">PROJECTS</h1>
             {/* gallery */}
             <div className="flex  justify-center border-solid border-white items-center">
                 <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-10 -translate-y-10 mr-10 " src="src/assets/ProjectsSection/Vector-1.png" />
