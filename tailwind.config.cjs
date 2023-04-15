@@ -24,7 +24,7 @@ module.exports = {
   
         'sm': {'max': '639px'},
         // => @media (max-width: 639px) { ... }
-        'esm':{'max':'350px'},
+        'esm':{'max':'450px'},
       }
     ,
     extend: {

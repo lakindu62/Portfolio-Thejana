@@ -15,9 +15,7 @@ function sideMenu() {
   setSideMenuActive(!sideMenuActive);
 }
 
-useEffect(() => {
-  console.log(sideMenuActive); // this will output the updated value of sideMenuActive
-}, [sideMenuActive]);
+
 
  const activeStyle ={
     transform: "translateX(-1vw) translateY(14.5vh)",
