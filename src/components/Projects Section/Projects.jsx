@@ -16,7 +16,7 @@ const image08 = "src/assets/ProjectsSection/card 08.jpeg"
 function Card({ width, height, image, id }) {
     let styles = {
         width: width,
-        height: height,
+        
     }
 
     if (window.innerWidth >= 1514){
@@ -24,13 +24,13 @@ function Card({ width, height, image, id }) {
          styles = {
             
             width:"14vw",
-            height:"20vw",
+            
             
          }
      } else if (window.innerWidth >= 1000 ){
         styles = {
             width:"17vw",
-            height:"26vw",
+           
             
          }
      }
@@ -145,7 +145,7 @@ function MainProjects() {
             {/* gallery */}
             <div className="flex  justify-center border-solid border-white items-center esm:w-[100vw]">
                 {/* <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 mr-10 esm:mr-5" src="src/assets/ProjectsSection/Vector-1.png" /> */}
-                <div ref={cardContainerRef} className="scroll-smooth esm:h-[70vw] h-[500px] lg:w-[70vw] w-[850px]  overflow-x-scroll  grid grid-cols-8 items-center  lg:gap-[29vw] 2xl:gap-72 gap-[22vw]   flex-none  border-solid border-white " >
+                <div ref={cardContainerRef} className=" scroll--container scroll-smooth esm:h-[70vw] h-[500px] lg:w-[70vw] w-[850px]  overflow-x-scroll  grid grid-cols-8 items-center  lg:gap-[29vw] 2xl:gap-72 gap-[22vw]   flex-none  border-solid border-white " >
                     <Card id="cardId" width={w} height={h} image={image01} />
                     <Card id="cardId" width={w} height={h} image={image02} />
                     <Card id="cardId" width={w} height={h} image={image03} />
