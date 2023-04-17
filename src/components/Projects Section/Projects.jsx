@@ -2,50 +2,52 @@ import React, { useState, useEffect, useRef } from "react"
 import "./projects.css"
 
 
-const image01 = "src/assets/ProjectsSection/card 01.jpg"
-const image02 = "src/assets/ProjectsSection/card 02.jpg"
-const image03 = "src/assets/ProjectsSection/card 03.jpg"
-const image04 = "src/assets/ProjectsSection/card 04.jpeg"
-const image05 = "src/assets/ProjectsSection/card 05.jpeg"
-const image06 = "src/assets/ProjectsSection/card 06.jpeg"
-const image07 = "src/assets/ProjectsSection/card 07.jpeg"
-const image08 = "src/assets/ProjectsSection/card 08.jpeg"
 
 
-//CARD COMPONENT
-function Card({ width, height, image, id }) {
-    let styles = {
-        width: width,
-        
+
+const cards = [
+     {
+        img:"src/assets/ProjectsSection/card 01.jpg",
+    },
+     {
+        img:"src/assets/ProjectsSection/card 02.jpg",
+    },
+    {
+        img:"src/assets/ProjectsSection/card 03.jpg",
+    },
+   {
+        img:"src/assets/ProjectsSection/card 04.jpeg",
+    },
+    {
+        img:"src/assets/ProjectsSection/card 05.jpeg",
+    },
+     {
+        img:"src/assets/ProjectsSection/card 06.jpeg",
+    },
+    {
+        img:"src/assets/ProjectsSection/card 07.jpeg",
+    },
+    {
+        img:"src/assets/ProjectsSection/card 08.jpeg",
     }
+]
 
-    if (window.innerWidth >= 1514){
-        
-         styles = {
-            
-            width:"14vw",
-            
-            
-         }
-     } else if (window.innerWidth >= 1000 ){
-        styles = {
-            width:"17vw",
-           
-            
-         }
-     }
 
-    console.log(styles)
-    // console
-
-    return (
+/*   ============   CARD COMPONENT   ============   */
+const cardEl = cards.map(card => {
+    return(
+        <div id="cardId" className=" mx-[4%]  w-[27%] flex-shrink-0               md:my-[7%] md:w-[200px] md:grayscale-0 ">
         <a href="#">
-            <div id={id} style={styles} className="   duration-500  hover:z-10 -translate-y-4 border-solid   flex  shadow-cardShadow bg-[#35292F] border rounded-2xl border-[#752390] hover:scale-[125%]">
-                <img className="duration-500  hover:grayscale-0 filter   border border-[#752390] rounded-2xl" src={image} />
-            </div>
+        <img className=" max-w-[90%] mx-auto " src={card.img} />
         </a>
+    </div>
     )
-}
+})
+   
+
+
+
+
 
 
 
@@ -56,8 +58,7 @@ function MainProjects() {
 
     const cardContainerRef = useRef(null)
 
-    const w = "25vw"
-    const h = "35vw"
+    
 
     const [scrolldis, setScrolldis] = useState(0)
 
@@ -84,7 +85,10 @@ function MainProjects() {
         cardContainerRef.current.scrollLeft += scrollOffset
 
     }
-    useEffect(() => {    //INTERSECTION OBSERVER FOR THE CARDS
+
+/* ============ INTERSECTION OBSERVER FOR THE CARDS ============ */
+
+    useEffect(() => {    //
 
         const styles = {
             transform: "scale(1.2)",
@@ -105,11 +109,14 @@ function MainProjects() {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    Object.assign(entry.target.style, styles);
+                    if(window.innerWidth>768){
+                        Object.assign(entry.target.style, styles);
+                    }
+                    
                    
                 } else {
                     
-                    Object.assign(entry.target.style, ifNotIntersectingStyles)
+                    window.innerWidth > 768 && Object.assign(entry.target.style, ifNotIntersectingStyles)
                     
                 }
             })
@@ -118,6 +125,14 @@ function MainProjects() {
             rootMargin: "0% -50% 0% -50%",
             threshold: "0"
         })
+
+        // if (window.innerWidth < 768) {
+        //     // Disable the Intersection Observer if the screen size is less than 768 pixels
+        //     observer.disconnect();
+        //   } else {
+        //     // Otherwise, start observing elements
+        //     observer.observe(element);
+        //   }
 
 
 
@@ -145,15 +160,9 @@ function MainProjects() {
             {/* gallery */}
             <div className="flex  justify-center border-solid border-white items-center esm:w-[100vw]">
                 {/* <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 mr-10 esm:mr-5" src="src/assets/ProjectsSection/Vector-1.png" /> */}
-                <div ref={cardContainerRef} className=" scroll--container scroll-smooth esm:h-[70vw] h-[500px] lg:w-[70vw] w-[850px]  overflow-x-scroll  grid grid-cols-8 items-center  lg:gap-[29vw] 2xl:gap-72 gap-[22vw]   flex-none  border-solid border-white " >
-                    <Card id="cardId" width={w} height={h} image={image01} />
-                    <Card id="cardId" width={w} height={h} image={image02} />
-                    <Card id="cardId" width={w} height={h} image={image03} />
-                    <Card id="cardId" width={w} height={h} image={image04} />
-                    <Card id="cardId" width={w} height={h} image={image05} />
-                    <Card id="cardId" width={w} height={h} image={image06} />
-                    <Card id="cardId" width={w} height={h} image={image07} />
-                    <Card id="cardId" width={w} height={h} image={image08} />
+                
+                <div ref={cardContainerRef} className=" flex overflow-scroll w-[70%] h-[500px] items-center      md:flex-col md:w-[50%] md:[]" >
+                    {cardEl}
                 </div>
                 {/* <img onClick={() => scroll(+1)} className=" duration-300     hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 ml-10 esm:ml-5" src="src/assets/ProjectsSection/Vector.png" /> */}
 
