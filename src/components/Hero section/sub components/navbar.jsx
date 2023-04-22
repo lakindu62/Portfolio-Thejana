@@ -52,8 +52,8 @@ function sideMenu() {
     return(
         <div className={` ${navbarVisible ? "" : '-translate-y-14'}   duration-500     fixed z-50 navbar flex justify-between items-center bg-black p-8 w-[100vw] h-[10vh] rounded-b-xl nav-shadow`}>
             <span id="home" className="flex gap-2 flex-shrink-0">
-                <a href=""><img className="h-10 w-10" src="/assets/HeroSection/instagram.png" alt="" /></a>
-                <a href=""><img className="h-10 w-10" src="/assets/HeroSection/linkedin.png" alt="" /></a>
+                <a href=""><img className="h-10 w-10" src="public/assets/HeroSection/instagram.png" alt="" /></a>
+                <a href=""><img className="h-10 w-10" src="public/assets/HeroSection/linkedin.png" alt="" /></a>
             </span>
             <div className="navMenu absolute right-[2.778vw] " onClick={sideMenu}    >
                 <span  className={`navMenuRods ${sideMenuActive ? "rod--01" : ''}`} onClick={sideMenu} ></span>
