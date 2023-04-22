@@ -2,7 +2,8 @@ import React , {useState , useEffect} from "react"
 import './App.css'
 import HeroSection from './components/Hero section/Hero section'
 import ProjectsSection from "./components/Projects Section/Projects.jsx"
-
+import About from "./components/About"
+import Contact from "./components/Contact"
 
 
 
@@ -28,8 +29,8 @@ function App() {
     <div className="">
       <HeroSection />
       <ProjectsSection />
-
-      
+      <About />
+      <Contact />
     </div>
      
   )

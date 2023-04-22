@@ -42,12 +42,12 @@ export default function HeroImage(){
       }
     
     return(
-        <div className="h-90vh bg-black flex justify-around items-center">
+        <div id="HOME" className="h-90vh bg-black flex justify-around items-center">
 
-            <img className="z-10 h-[45%] w-[35%]  mt-20" src="src/assets/HeroSection/heroS 1.png" alt="" />
-            <div className="text-center justify-center -translate-x-[15vw] -translate-y-[6.667vw] relative ">
+            <img  className="z-10 h-[45%] w-[35%]  mt-20" src="src/assets/HeroSection/heroS 1.png" alt="" />
+            <div   className="text-center justify-center -translate-x-[15vw] -translate-y-[6.667vw] relative ">
                 <div className="-m-[2.5vw] text-white text-[7vw] font-iceland">Hi, I'm Thejana</div>
-                <span className=" shadow-heroShadow text-[#EEEBD0] text-[3.5vw] font-iceland">Freelance Designer</span>
+                <span className=" shadow-heroShadow text-[#EEEBD0] text-xl font-iceland">Freelance Designer</span>
                 <span className="  shadow-heroShadow text-[#EFBCD5] font-iceland flex justify-center text-[1vw]"><img src="src/assets/HeroSection/location.png" alt="" />Sri Lanka</span>
 
                 <img className="h-[5vw] translate-x-1vw z-0 absolute -top-[2.778vw] -left-[5.556vw]" src="src/assets/HeroSection/Rectangle 01.svg" style={imageMoveStyle} />

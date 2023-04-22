@@ -1,0 +1,167 @@
+
+
+
+
+
+
+
+
+
+/*=============================== ABOUT SECTION ===========================*/
+
+.skill--card{
+    background-color: #2B2929;
+    padding: 1em 1.5em;
+    font-family: ibm;
+}
+
+
+.skill--card::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    border-radius: inherit;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.1);
+}
+
+.skill--card:nth-child(1){
+    transition:  ease-in-out 1000ms;
+}
+.skill--card:nth-child(2){
+    transition: ease-in-out 800ms;
+}
+.skill--card:nth-child(3){
+    transition: ease-in-out 600ms;
+}
+.skill--card:nth-child(4){
+    transition: ease-in-out 400ms;
+}
+
+
+
+
+.card--font{
+    font-family: 'iceland';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 12px;
+text-align: center;
+color: #FFF7F7;
+text-shadow: 0px 2px 2px rgba(224, 232, 132, 0.4);
+}
+
+
+
+
+.ball {
+  z-index: 2;
+  margin: 0px 50px;
+  background: linear-gradient(145deg, #646060 0%, #9c9b9b 30%, #808080 85%);
+  border-radius: 50%;
+  transition-duration: 2s;
+  
+  
+}
+
+
+.right-side--ball-1{
+    width: 25px;
+    height: 25px;
+}
+.right-side--ball-2{
+    width: 21px;
+    height: 21px;
+}
+.right-side--ball-3{
+    width: 18px;
+    height: 18px;
+}
+.right-side--ball-4{
+    width: 15px;
+    height: 15px;
+}
+.right-side--ball-5{
+    width: 12px;
+    height: 12px;
+}
+
+.left-side--ball-1{
+    width: 12px;
+    height: 12px;
+}
+.left-side--ball-2{
+    width: 15px;
+    height: 15px;
+}
+.left-side--ball-3{
+    width: 18px;
+    height: 18px;
+}
+.left-side--ball-4{
+    width: 21px;
+    height: 21px;
+}
+.left-side--ball-5{
+    width: 25px;
+    height: 25px;
+}
+
+.ball::after {
+    position: absolute;
+    
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    border-radius: inherit;
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+@media(max-width:725px){
+
+    .left-side--ball-5 , .right-side--ball-1{
+        width: 19px;
+        height: 19px;
+    }
+    .left-side--ball-4 , .right-side--ball-2{
+        width: 16px;
+        height: 16px;
+    }
+    .left-side--ball-3 , .right-side--ball-3{
+        width: 13px;
+        height: 13px;
+    }
+    .left-side--ball-2 , .right-side--ball-4{
+        width: 10px;
+        height: 10px;
+    }
+    .left-side--ball-1 , .right-side--ball-5{
+        width: 7px;
+        height: 7px;
+    }
+}
+
+
+
+
+/*=============================== CONTACT SECTION ===========================*/
+
+
+
+    .contact--shadow, .mask{
+        box-shadow: 0px -4px 4px 0px #762493;
+
+    }
+
+
+
+

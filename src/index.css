@@ -1,14 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond&family=IBM+Plex+Serif:wght@600&family=Montserrat:wght@300&family=Phudu:wght@500&family=Rubik&family=Rubik+80s+Fade&display=swap');
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 
-/* body{
-  background-color: black;
-} */
+
+*{
+  font-size: 16px;
+}
+
+@media(min-width:763px){
+  *{
+    font-size: 20px;
+  }
+}
 
 @font-face {
   font-family: 'Iceland';
   src: url('src/assets/fonts/Iceland-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'IBMPlexSerif';
+  src: url('src/assets/fonts/IBMPlexSerif-SemiBold.woff') format('truetype');
 }
