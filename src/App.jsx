@@ -26,7 +26,7 @@ function App() {
 
   return (
     !loader &&
-    <div className="">
+    <div className=" overflow-hidden">
       <HeroSection />
       <ProjectsSection />
       <About />
