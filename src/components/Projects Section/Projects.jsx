@@ -7,28 +7,28 @@ import "./Projects.css"
 
 const cards = [
      {
-        img:"src/assets/ProjectsSection/card 01.jpg",
+        img:"/assets/ProjectsSection/card 01.jpg",
     },
      {
-        img:"src/assets/ProjectsSection/card 02.jpg",
+        img:"/assets/ProjectsSection/card 02.jpg",
     },
     {
-        img:"src/assets/ProjectsSection/card 03.jpg",
+        img:"/assets/ProjectsSection/card 03.jpg",
     },
    {
-        img:"src/assets/ProjectsSection/card 04.jpeg",
+        img:"/assets/ProjectsSection/card 04.jpeg",
     },
     {
-        img:"src/assets/ProjectsSection/card 05.jpeg",
+        img:"/assets/ProjectsSection/card 05.jpeg",
     },
      {
-        img:"src/assets/ProjectsSection/card 06.jpeg",
+        img:"/assets/ProjectsSection/card 06.jpeg",
     },
     {
-        img:"src/assets/ProjectsSection/card 07.jpeg",
+        img:"/assets/ProjectsSection/card 07.jpeg",
     },
     {
-        img:"src/assets/ProjectsSection/card 08.jpeg",
+        img:"/assets/ProjectsSection/card 08.jpeg",
     }
 ]
 
@@ -104,12 +104,12 @@ function MainProjects() {
             <h1 id="projects" className="text-center text-[#EEEBD0] text-3xl  pt-4  pb-4 font-iceland ">PROJECTS</h1>
             {/* gallery */}
             <div className="flex  justify-center border-solid border-white items-center esm:w-[100vw]">
-                {/* <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 mr-10 esm:mr-5" src="src/assets/ProjectsSection/Vector-1.png" /> */}
+                {/* <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 mr-10 esm:mr-5" src="/assets/ProjectsSection/Vector-1.png" /> */}
                 
                 <div ref={cardContainerRef} className=" flex overflow-scroll w-[70%] h-[500px] miesm:h-[700px] mimd:h-[400px]  mixl:h-[600px] esm:h-[300px] esm:w-[300px] items-center      md:flex-col md:w-[50%] " >
                     {cardEl}
                 </div>
-                {/* <img onClick={() => scroll(+1)} className=" duration-300     hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 ml-10 esm:ml-5" src="src/assets/ProjectsSection/Vector.png" /> */}
+                {/* <img onClick={() => scroll(+1)} className=" duration-300     hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 ml-10 esm:ml-5" src="/assets/ProjectsSection/Vector.png" /> */}
 
             </div>
 
@@ -124,7 +124,7 @@ function MainProjects() {
 export default function ProjectsSection() {
     return (
         <div className="ProjectsSectionContainer h-[100vh] overflow-hidden miesm:h-[100vh] mimd:h-[70vh] mixl:h-[100vh]">
-            {/* <img className="invisible" src="src/assets/ProjectsSection/bgImage.jpg" /> */}
+            {/* <img className="invisible" src="/assets/ProjectsSection/bgImage.jpg" /> */}
             <MainProjects />
 
         </div>

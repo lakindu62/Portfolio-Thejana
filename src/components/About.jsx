@@ -133,7 +133,7 @@ export default function About() {
                     </span>
                 </span>
                 <span className="w-[80%]  -order-1 milg:order-1 flex justify-center max-w-[700px]">
-                    <img className=" mimd:w-[70%] milg:w-[70%] mixl:w-[70%] milg:min-w-[300px] mi2xl:w-[60%] milg:ml-5   z-0 mb-5 " src="src/assets/AboutSection/DP.png" alt="" />
+                    <img className=" mimd:w-[70%] milg:w-[70%] mixl:w-[70%] milg:min-w-[300px] mi2xl:w-[60%] milg:ml-5   z-0 mb-5 " src="/assets/AboutSection/DP.png" alt="" />
                 </span>
             </div>
 
@@ -162,26 +162,26 @@ export default function About() {
             <div className="w-[100%] grid grid-cols-2  justify-items-center relative  pb-[10vh] mt-8 milg:flex milg:justify-center">
 
                 <span id="card--El" className=" skill--card min-w-[90px] min-h-[85px]  grid relative rounded-xl  justify-items-center  m-2 justify-self-end">
-                    <img className="w-11" src="src/assets/AboutSection/photoshop.svg" />
+                    <img className="w-11" src="/assets/AboutSection/photoshop.svg" />
                     <span className="card--font">Photoshop</span>
                 </span>
                 <span id="card--El" className=" skill--card min-w-[90px] min-h-[85px]  grid relative rounded-xl  justify-items-center  m-2 justify-self-start ">
-                    <img className="w-11" src="src/assets/AboutSection/lightroom.svg" />
+                    <img className="w-11" src="/assets/AboutSection/lightroom.svg" />
                     <span className="card--font">Lightroom</span>
                 </span>
 
 
                 <span id="card--El" className=" skill--card min-w-[90px] min-h-[85px]  grid relative rounded-xl  justify-items-center m-2 justify-self-end ">
-                    <img className="w-11" src="src/assets/AboutSection/illustrator.svg" />
+                    <img className="w-11" src="/assets/AboutSection/illustrator.svg" />
                     <span className="card--font">Illustrator</span>
                 </span>
                 <span id="card--El" className=" skill--card min-w-[90px] min-h-[85px]  grid relative rounded-xl  justify-items-center m-2 justify-self-start">
-                    <img className="w-11" src="src/assets/AboutSection/indesign.svg" />
+                    <img className="w-11" src="/assets/AboutSection/indesign.svg" />
                     <span className="card--font">Indesign</span>
                 </span>
-                <img onClick={handleClick} className="absolute left-[-7%] bottom-[0%] milg:left-0 milg:max-w-[300px] w-[50%] max-w-[200px] " src="src/assets/AboutSection/Orge.png" alt="" />
-                <img onClick={handleClick} className="absolute left-[-7%] bottom-[0%] milg:left-4 milg:max-w-[350px] w-[60%] max-w-[250px] -z-10 " src="src/assets/AboutSection/meteroite.png" alt="" />
-                <img onClick={handleClick} className="absolute right-[-7%] bottom-[-10%] milg:right-20  h-[300%]  -z-10 " src="src/assets/AboutSection/pngwing 2.svg" alt="" />
+                <img onClick={handleClick} className="absolute left-[-7%] bottom-[0%] milg:left-0 milg:max-w-[300px] w-[50%] max-w-[200px] " src="/assets/AboutSection/Orge.png" alt="" />
+                <img onClick={handleClick} className="absolute left-[-7%] bottom-[0%] milg:left-4 milg:max-w-[350px] w-[60%] max-w-[250px] -z-10 " src="/assets/AboutSection/meteroite.png" alt="" />
+                <img onClick={handleClick} className="absolute right-[-7%] bottom-[-10%] milg:right-20  h-[300%]  -z-10 " src="/assets/AboutSection/pngwing 2.svg" alt="" />
 
             </div>
 

@@ -21,11 +21,11 @@
 
 @font-face {
   font-family: 'Iceland';
-  src: url('src/assets/fonts/Iceland-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/Iceland-Regular.ttf') format('truetype');
 }
 
 
 @font-face {
   font-family: 'IBMPlexSerif';
-  src: url('src/assets/fonts/IBMPlexSerif-SemiBold.woff') format('truetype');
+  src: url('/assets/fonts/IBMPlexSerif-SemiBold.woff') format('truetype');
 }

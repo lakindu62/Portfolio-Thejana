@@ -44,18 +44,18 @@ export default function HeroImage(){
     return(
         <div id="HOME" className="h-90vh bg-black flex justify-around items-center">
 
-            <img  className="z-10 h-[45%] w-[35%]  mt-20" src="src/assets/HeroSection/heroS 1.png" alt="" />
+            <img  className="z-10 h-[45%] w-[35%]  mt-20" src="/assets/HeroSection/heroS 1.png" alt="" />
             <div   className="text-center justify-center -translate-x-[15vw] -translate-y-[6.667vw] relative ">
                 <div className="-m-[2.5vw] text-white text-[7vw] font-iceland">Hi, I'm Thejana</div>
                 <span className=" shadow-heroShadow text-[#EEEBD0] text-xl font-iceland">Freelance Designer</span>
-                <span className="  shadow-heroShadow text-[#EFBCD5] font-iceland flex justify-center text-[1vw]"><img src="src/assets/HeroSection/location.png" alt="" />Sri Lanka</span>
+                <span className="  shadow-heroShadow text-[#EFBCD5] font-iceland flex justify-center text-[1vw]"><img src="/assets/HeroSection/location.png" alt="" />Sri Lanka</span>
 
-                <img className="h-[5vw] translate-x-1vw z-0 absolute -top-[2.778vw] -left-[5.556vw]" src="src/assets/HeroSection/Rectangle 01.svg" style={imageMoveStyle} />
-                <img className="h-[3vw] translate-x-1vw z-0 absolute -top-[5.556vw] left-[40%]" src="src/assets/HeroSection/Rectangle 02.svg" style={imageMoveStyleSlow}/>
-                <img className="h-[4vw] translate-x-1vw z-0 absolute -top-[2.778vw] -right-[5.556vw]" src="src/assets/HeroSection/Rectangle 03.svg" style={imageMoveStyleSlow}/>
-                <img className="h-[5vw] translate-x-1vw z-0 absolute right-0" src="src/assets/HeroSection/Rectangle 04.svg" style={imageMoveStyleFast}/>
-                <img className="h-[5vw] translate-x-1vw z-0 absolute" src="src/assets/HeroSection/Rectangle 05.svg" style={imageMoveStyle}/>
-                <img className="h-[3vw] translate-x-1vw z-0 absolute -left-[13.333vw] top-[5.556vw]" src="src/assets/HeroSection/Rectangle 06.svg" style={imageMoveStyleSlow}/>
+                <img className="h-[5vw] translate-x-1vw z-0 absolute -top-[2.778vw] -left-[5.556vw]" src="/assets/HeroSection/Rectangle 01.svg" style={imageMoveStyle} />
+                <img className="h-[3vw] translate-x-1vw z-0 absolute -top-[5.556vw] left-[40%]" src="/assets/HeroSection/Rectangle 02.svg" style={imageMoveStyleSlow}/>
+                <img className="h-[4vw] translate-x-1vw z-0 absolute -top-[2.778vw] -right-[5.556vw]" src="/assets/HeroSection/Rectangle 03.svg" style={imageMoveStyleSlow}/>
+                <img className="h-[5vw] translate-x-1vw z-0 absolute right-0" src="/assets/HeroSection/Rectangle 04.svg" style={imageMoveStyleFast}/>
+                <img className="h-[5vw] translate-x-1vw z-0 absolute" src="/assets/HeroSection/Rectangle 05.svg" style={imageMoveStyle}/>
+                <img className="h-[3vw] translate-x-1vw z-0 absolute -left-[13.333vw] top-[5.556vw]" src="/assets/HeroSection/Rectangle 06.svg" style={imageMoveStyleSlow}/>
                 
             </div>
 
