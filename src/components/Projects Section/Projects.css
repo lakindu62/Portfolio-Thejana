@@ -15,4 +15,29 @@
         }
 }
 
+/* .gallery::-webkit-scrollbar{ */
+    /* display:none;
+} */
+
+.gallery{
+    
+}
+
+.gallery::-webkit-scrollbar {
+    width: 2px;
+    height: 10px;
+    
+  }
+
+
+.gallery::-webkit-scrollbar-track {
+    background-color: black;
+    border-radius: 50px;
+  }
+  
+  .gallery::-webkit-scrollbar-thumb {
+    background-color: rgb(81, 2, 81);
+    border-radius: 50px;
+  }
+
 

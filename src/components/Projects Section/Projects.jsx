@@ -106,7 +106,7 @@ function MainProjects() {
             <div className="flex  justify-center border-solid border-white items-center esm:w-[100vw]">
                 {/* <img onClick={() => scroll(-240)} className=" duration-300    hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 mr-10 esm:mr-5" src="/assets/ProjectsSection/Vector-1.png" /> */}
                 
-                <div ref={cardContainerRef} className=" flex overflow-scroll w-[70%] h-[500px] miesm:h-[700px] mimd:h-[400px]  mixl:h-[600px] esm:h-[300px] esm:w-[300px] items-center      md:flex-col md:w-[50%] " >
+                <div ref={cardContainerRef} className="gallery flex overflow-x-scroll w-[70%] h-[500px] miesm:h-[700px] mimd:h-[400px]  mixl:h-[600px] esm:h-[300px] esm:w-[300px] items-center      md:flex-col md:w-[50%] " >
                     {cardEl}
                 </div>
                 {/* <img onClick={() => scroll(+1)} className=" duration-300     hover:scale-[105%] h-[4vw] w-[4vw] -translate-y-10 ml-10 esm:ml-5" src="/assets/ProjectsSection/Vector.png" /> */}
